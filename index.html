@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#15803d">
+  <title>AI FoodFind | Quick App Tour</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f8f5;
+      color: #183526;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #15803d;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #bbf7d0;
+    }
+
+    .header-label {
+      font-size: 13px;
+      color: #dcfce7;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 45px auto;
+      padding: 20px;
+    }
+
+    .tour-card {
+      background: white;
+      border-radius: 22px;
+      padding: 40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .welcome-icon {
+      font-size: 75px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #dcfce7;
+      color: #15803d;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 15px;
+      color: #166534;
+    }
+
+    h2 {
+      font-size: 27px;
+      margin-bottom: 15px;
+      color: #166534;
+    }
+
+    .description {
+      color: #64748b;
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    .illustration {
+      background: #f0fdf4;
+      border-radius: 18px;
+      padding: 35px 15px;
+      margin: 25px 0;
+      font-size: 75px;
+    }
+
+    .step-number {
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .features {
+      text-align: left;
+      max-width: 500px;
+      margin: 25px auto;
+    }
+
+    .feature {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 13px 0;
+      border-bottom: 1px solid #e5e7eb;
+      line-height: 1.6;
+    }
+
+    .feature-icon {
+      font-size: 23px;
+    }
+
+    .feature strong {
+      display: block;
+      color: #166534;
+    }
+
+    .progress-area {
+      margin-top: 30px;
+    }
+
+    .progress-text {
+      display: flex;
+      justify-content: space-between;
+      color: #64748b;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #16a34a;
+      transition: width 0.3s;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 13px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .previous {
+      background: #e5e7eb;
+      color: #334155;
+    }
+
+    .next {
+      background: #15803d;
+      color: white;
+      margin-left: auto;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      color: #94a3b8;
+      padding: 20px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      .container {
+        margin: 20px auto;
+        padding: 12px;
+      }
+
+      .tour-card {
+        padding: 25px 18px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+
+      .buttons button {
+        padding: 12px 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🍃 AI FOOD<span>FIND</span></div>
+  <div class="header-label">QUICK APP TOUR</div>
+</header>
+
+<main class="container">
+  <section class="tour-card">
+
+    <!-- WELCOME -->
+    <div class="tour-step">
+      <div class="welcome-icon">🍽️</div>
+      <div class="tag">WELCOME TO AI FOODFIND</div>
+      <h1>Discover. Choose. Enjoy.</h1>
+      <p class="description">
+        Welcome to AI FoodFind! Your smart food discovery
+        companion. Let us guide you through the application
+        and help you discover your next favorite meal.
+      </p>
+      <div class="illustration">🥗 🍔 🍕 🥤</div>
+      <p class="description">
+        Follow this quick tour to learn how to discover food,
+        receive AI recommendations, place orders, and track
+        your delivery.
+      </p>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="tour-step hidden">
+      <div class="step-number">STEP 1 OF 5</div>
+      <div class="illustration">🤖 🍜</div>
+      <h2>AI Food Recommendation</h2>
+      <p class="description">
+        Not sure what to eat? Let AI FoodFind help you
+        discover food suggestions based on what you are
+        craving.
+      </p>
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">💭</span>
+          <div><strong>Enter Your Cravings</strong>
+            Tell the app what food you want.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">✨</span>
+          <div><strong>Get AI Suggestions</strong>
+            Explore food recommendations generated by AI.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🍽️</span>
+          <div><strong>Explore Your Choices</strong>
+            Discover food options that match your cravings.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="tour-step hidden">
+      <div class="step-number">STEP 2 OF 5</div>
+      <div class="illustration">🔎 🍕</div>
+      <h2>Search for Food</h2>
+      <p class="description">
+        Already know what you want to eat? Use the food
+        search feature to find your preferred food choices.
+      </p>
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">🔍</span>
+          <div><strong>Search Your Favorite Food</strong>
+            Enter the name of the food you want.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">📋</span>
+          <div><strong>Explore Available Choices</strong>
+            Browse food options and their details.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🛒</span>
+          <div><strong>Add to Your Cart</strong>
+            Select your desired food for ordering.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="tour-step hidden">
+      <div class="step-number">STEP 3 OF 5</div>
+      <div class="illustration">📍 🏪</div>
+      <h2>Discover Nearby Food</h2>
+      <p class="description">
+        Explore nearby food establishments and discover
+        available food choices around your location.
+      </p>
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">📍</span>
+          <div><strong>Access Your Location</strong>
+            Allow location access to discover nearby options.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🏪</span>
+          <div><strong>Find Nearby Places</strong>
+            Explore nearby food establishments.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🗺️</span>
+          <div><strong>View the Route</strong>
+            Check the location and route to your destination.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="tour-step hidden">
+      <div class="step-number">STEP 4 OF 5</div>
+      <div class="illustration">🛒 💳</div>
+      <h2>Cart and Checkout</h2>
+      <p class="description">
+        Ready to order? Review your selected food items
+        and proceed to checkout.
+      </p>
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">🛍️</span>
+          <div><strong>Review Your Cart</strong>
+            Check your selected food and quantities.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">💰</span>
+          <div><strong>Review Your Total</strong>
+            Check your order summary before checkout.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🚚</span>
+          <div><strong>Choose Your Order Method</strong>
+            Select delivery or pickup when available.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="tour-step hidden">
+      <div class="step-number">STEP 5 OF 5</div>
+      <div class="illustration">🛵 📦</div>
+      <h2>Track Your Order</h2>
+      <p class="description">
+        Stay updated on your order and follow its progress
+        after checkout.
+      </p>
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">👨‍🍳</span>
+          <div><strong>Preparing</strong>
+            Your order is being prepared.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🛵</span>
+          <div><strong>On the Way</strong>
+            Follow your delivery progress.
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">✅</span>
+          <div><strong>Delivered</strong>
+            Your order has arrived!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINISH -->
+    <div class="tour-step hidden">
+      <div class="welcome-icon">🎉</div>
+      <div class="tag">TOUR COMPLETED</div>
+      <h1>You're Ready!</h1>
+      <p class="description">
+        Congratulations! You have completed the AI FoodFind
+        Quick App Tour.
+      </p>
+      <div class="illustration">🍔 🍕 🍜 🥗</div>
+      <h2>Happy Food Discovering!</h2>
+      <p class="description">
+        Thank you for exploring AI FoodFind.
+        Discover your cravings and enjoy your food journey!
+      </p>
+    </div>
+
+    <div class="progress-area">
+      <div class="progress-text">
+        <span id="progressLabel">Welcome</span>
+        <span id="stepCount">0 of 5</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="previous hidden" id="previousBtn"
+        onclick="changeStep(-1)">← Previous</button>
+
+      <button class="next" id="nextBtn"
+        onclick="changeStep(1)">Start Tour →</button>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  © 2026 AI FoodFind | Quick App Tour
+  <br><br>
+  Discover. Choose. Enjoy.
+</footer>
+
+<script>
+  const steps = document.querySelectorAll(".tour-step");
+  const previousBtn = document.getElementById("previousBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const progressFill = document.getElementById("progressFill");
+  const progressLabel = document.getElementById("progressLabel");
+  const stepCount = document.getElementById("stepCount");
+
+  const labels = [
+    "Welcome",
+    "AI Food Recommendation",
+    "Search for Food",
+    "Nearby Food",
+    "Cart and Checkout",
+    "Order Tracking",
+    "Completed"
+  ];
+
+  let currentStep = 0;
+
+  function showStep() {
+    steps.forEach((step, index) => {
+      step.classList.toggle("hidden", index !== currentStep);
+    });
+
+    previousBtn.classList.toggle("hidden", currentStep === 0);
+
+    if (currentStep === 0) {
+      nextBtn.textContent = "Start Tour →";
+    } else if (currentStep === steps.length - 1) {
+      nextBtn.textContent = "Restart Tour ↻";
+    } else if (currentStep === steps.length - 2) {
+      nextBtn.textContent = "Finish Tour →";
+    } else {
+      nextBtn.textContent = "Next →";
+    }
+
+    progressLabel.textContent = labels[currentStep];
+
+    const completed = Math.min(currentStep, 5);
+    stepCount.textContent = completed + " of 5";
+    progressFill.style.width = (completed / 5 * 100) + "%";
+  }
+
+  function changeStep(direction) {
+    if (currentStep === steps.length - 1 && direction === 1) {
+      currentStep = 0;
+    } else {
+      currentStep = Math.max(
+        0,
+        Math.min(steps.length - 1, currentStep + direction)
+      );
+    }
+
+    showStep();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  showStep();
+</script>
+
+</body>
+</html>
